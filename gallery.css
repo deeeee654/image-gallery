@@ -1,11 +1,30 @@
 body {
   max-width: fit-content;
   margin-inline: auto;
+  overflow-x: hidden;
 }
 header {
   background-color: black;
   color: white;
+  font-family: blackadder itc regular;
   margin: 0;
   padding: 1px 110px 1px 110px;
   border: 2px solid rgb(237, 163, 176);
+}
+.pics {
+  width: 20vh;
+  height: 10vh;
+  display: grid;
+  grid-template-columns: repeat(1, 150px);
+  grid-auto-flow: row;
+  column-gap: 20px;
+  row-gap: 20px;
+}
+img {
+  flex-basis: 250px;
+  flex-shrink: none;
+  width: 150px;
+  height: 150px;
+  margin-right: 10px;
+  margin-bottom: 10px;
 }

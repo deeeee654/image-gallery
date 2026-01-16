@@ -16,7 +16,7 @@ const images = [
     alt: "alternative",
   },
   {
-    src: "img/coquette/coq1.webp",
+    src: "img/coquette/coq1.jpg",
     alt: "coquette girl",
   },
 ];
@@ -27,6 +27,10 @@ function createFront() {
 
     imgElement.src = image.src;
     imgElement.alt = image.alt;
+
+    imgElement.addEventListener("click", function () {
+      console.log(images);
+    });
 
     backing.append(imgElement);
   });
