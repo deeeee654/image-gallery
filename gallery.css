@@ -1,0 +1,11 @@
+body {
+  max-width: fit-content;
+  margin-inline: auto;
+}
+header {
+  background-color: black;
+  color: white;
+  margin: 0;
+  padding: 1px 110px 1px 110px;
+  border: 2px solid rgb(237, 163, 176);
+}
