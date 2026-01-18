@@ -1,20 +1,28 @@
 body {
-  max-width: fit-content;
   margin-inline: auto;
   overflow-x: hidden;
 }
-header {
+.container {
+  display: grid;
+}
+.header {
   background-color: black;
   color: white;
-  font-family: blackadder itc regular;
   margin: 0;
-  padding: 1px 110px 1px 110px;
   border: 2px solid rgb(237, 163, 176);
+  text-align: center;
+}
+.header h1 {
+  font-family: blackadder itc regular;
+}
+.paragraph {
+  text-align: center;
 }
 .pics {
   width: 20vh;
   height: 10vh;
   display: grid;
+  margin: auto;
   grid-template-columns: repeat(1, 150px);
   grid-auto-flow: row;
   column-gap: 20px;
@@ -27,4 +35,20 @@ img {
   height: 150px;
   margin-right: 10px;
   margin-bottom: 10px;
+}
+@media (mmin-width: 800px) {
+  .header {
+    text-align: center;
+    overflow-x: hidden;
+    grid-area: 1 / span 6;
+  }
+  .pics {
+    width: 30vh;
+    height: 20vh;
+    display: grid;
+    grid-template-rows: repeat(2, 150px);
+    grid-auto-flow: column;
+    column-gap: 40px;
+    row-gap: 40px;
+  }
 }

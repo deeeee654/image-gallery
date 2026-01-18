@@ -30,6 +30,7 @@ function createFront() {
 
     imgElement.addEventListener("click", function () {
       console.log(images);
+      window.open("gallery.html");
     });
 
     backing.append(imgElement);
