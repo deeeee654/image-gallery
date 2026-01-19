@@ -45,6 +45,7 @@ function createGallery() {
 
     imageElement.src = photo.src;
     imageElement.alt = photo.alt;
+    imageElement.tabIndex = 0;
 
     imageElement.addEventListener("click", function () {
       console.log(photos);
