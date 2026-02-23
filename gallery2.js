@@ -1,4 +1,5 @@
 const page = document.querySelector(".pictures");
+const larger = document.getElementById(bigger);
 
 const photos = [
   {
@@ -40,17 +41,27 @@ const photos = [
 ];
 
 function createGallery() {
-  photos.forEach(function (photo) {
+  for (let i = 0; i < photos.length; i++) {
     const imageElement = document.createElement("img");
-
-    imageElement.src = photo.src;
-    imageElement.alt = photo.alt;
-    imageElement.tabIndex = 0;
+    debugger;
+    imageElement.src = photos[i].src;
+    imageElement.alt = photos[i].alt;
 
     imageElement.addEventListener("click", function () {
-      console.log(photos);
+      console.log(photos[i]);
+      createBiggallery(photos[i]);
     });
+
     page.append(imageElement);
-  });
+  }
 }
 createGallery();
+
+function createBiggallery(bigPhoto) {
+  const bigger = document.createElement("img");
+
+  bigger.src = bigPhoto.src;
+  bigger.alt = bigPhoto.alt;
+
+  larger.append(bigger);
+}
